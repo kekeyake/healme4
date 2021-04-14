@@ -122,3 +122,45 @@ header .closed_menu {display: none;}
 .paging a {font-size: 24px;margin:0 10px;padding:0 10px;color: #C4C4C4;}
 .paging a.on,
 .paging a:hover {color: #7DC593;}
+
+/* 파트너스 신청하기 */
+.admin .btn_apply {display: block;width: 450px;height: 105px; background: #7DC593;border: 1px solid #7DC593;box-sizing: border-box;border-radius: 100px;font-size: 35px;color:#fff;font-weight: 700;margin:0 auto;}
+.admin .btn_apply span {font-weight:400;}
+.application_guide {width: 1240px;margin:50px auto;padding:72px 40px 98px;}
+.application_guide .top_cont {padding:0 65px 35px;border-bottom: 1px solid #E6E6E6;}
+.application_guide .price_info {margin-top: 42px;display: flex;}
+.application_guide .price_info > ul li {width: 526px;height: 115px;display: flex;align-items: center; border: 5px solid #E6E6E6;box-sizing: border-box;border-radius: 4px;font-size: 24px;padding-left: 120px;background: url(../img/ico_check_green_off.svg) no-repeat 43px 50% / 43px;cursor: pointer;}
+.application_guide .price_info > ul li:first-child {margin-bottom: 40px;}
+/* .application_guide .price_info > ul li:hover, */
+.application_guide .price_info > ul li.on {border-color: #7DC593;color:#222;background: url(../img/ico_check_green_on.svg) no-repeat 43px 50% / 43px;}
+.application_guide .price_wrap {margin-left: 120px;}
+.application_guide .price_wrap > div {display: none;width: 240px;}
+.application_guide .price_wrap > div.on {display: block;}
+.application_guide .price_wrap > div .t1 {font-size: 30px;color:#000;text-align: center;margin-bottom: 24px;}
+.application_guide .price_wrap > div dt {font-size: 19px;}
+.application_guide .price_wrap > div dd {font-size: 24px;margin-top: 10px;}
+.application_guide .price_wrap > div dd span {font-size: 25px;}
+.application_guide .price_wrap > div dl {color:#888;}
+.application_guide .price_wrap > div dl + dl {margin-top: 80px;color:#222;position: relative;}
+.application_guide .price_wrap > div dl + dl::before {content: '';width: 50px;height: 50px; display: block;text-align: center;background: url(../img/ico_arrow_down.svg) no-repeat 50% / 50px 50px;position: absolute;left: 50%;top:-70px;transform: translateX(-50%);}
+
+.application_guide .cont_info {padding:35px 65px 0;}
+.application_guide .cont_info h2 {font-size: 36px;font-weight: 400;}
+.application_guide .cont_info h2 span {color: #FC776A;}
+.application_guide .cont_info h2 b {font-weight: 700;}
+.application_guide .cont_info h3 {text-align: center;margin-top: 70px;font-size: 25px;color:#222;}
+.application_guide .cont_info h3 span {color: #FC776A;}
+.application_guide .cont_info .t1 {margin-top: 20px;text-align: center;font-size: 20px;}
+.application_guide .partners_info {display: flex;justify-content: space-between;margin-top: 30px;}
+.application_guide .partners_info li {width: 252px;height: 63px;display: flex;align-items: center; border: 1px solid #7DC593;box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);border-radius: 100px;padding-left: 90px;background: url(../img/ico_check_green.svg) no-repeat 40px 50% / 30px 23px;font-size: 21px;color:#000;}
+.application_guide .benefits_list {margin: 30px 0 40px;}
+.application_guide .benefits_list li {display: flex;align-items: center;width: 100%;height: 63px; border: 1px solid #FC776A;border-radius: 100px;justify-content: center;}
+.application_guide .benefits_list li:first-child {margin-bottom: 20px;}
+.application_guide .benefits_list li span {padding-left: 50px;position: relative;font-size: 21px;color:#000;}
+.application_guide .benefits_list li span::before {content: "+";font-size: 54px;color: #FC776A;position: absolute;left: 0;top:-18px;}
+.application_guide .t2 {text-align: center;font-size: 21px;color:#222;font-weight: 700;}
+.application_guide .service_img {margin-top: 20px;display: flex;justify-content: center;}
+.application_guide .service_img li {margin:0 10px;}
+.application_guide .service_img p {font-size: 16px;color:#c4c4c4;padding-left: 10px;margin-top: 10px;}
+.application_guide .t3 {text-align: center;font-size: 22px;color: #7DC593;font-weight: 400;margin-top: 40px;line-height: 32px;}
+.application_guide .t3 b {font-weight: 700;}
