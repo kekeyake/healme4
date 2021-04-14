@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HEAL ME">
+    <meta property="og:description" content="HEAL ME">
+    <!-- <meta property="og:image" content="assets/images/og.png"> -->
+    <meta property="og:url" content="">
+    <title>HEAL ME</title>
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" /> -->
+    <link type="text/css" rel="stylesheet" href="assets/css/healme_font.css" />
+    <link type="text/css" rel="stylesheet" href="assets/libs/jquery.scrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/healme_default.css" />
+</head>
+<body>
+<div class="bg_dimmed"></div>
+<div id="wrap" class="healme_wrap hospital"><!--병원 계정 시 hospital class 추가 -->
+    <header>
+        <h1><a href="/"><img src="assets/img/logo.svg" alt="HEAL ME"></a></h1>
+    </header>
+    <div class="container">
+        <h2>힐미 <span>병원 계정</span> 회원가입</h2>
+        <p class="tit"><i class="required">*</i>표시는 필수 입력 항목입니다. <br>회원가입한 아이디는 힐미 앱에서 사용 가능합니다.</p>
+
+        <h3>계정 정보</h3>
+        <section class="form_feild">
+            <div class="full">
+                <input type="text" class="input_text">
+                <label>아이디 <i class="required">*</i></label>
+                <button class="btn_check" disabled>중복확인</button><!-- disable, ok, default 3가지 스타일 -->
+                <!-- <button class="btn_check">중복확인</button>
+                <button class="btn_check ok">중복확인</button> -->
+            </div>
+            <div class="full">
+                <input type="password" class="input_text">
+                <label>비밀번호 <i class="required">*</i></label>
+            </div>
+            <div class="full">
+                <input type="password" class="input_text">
+                <label>비밀번호 확인 <i class="required">*</i></label>
+            </div>
+        </section>
+
+        <h3>담당자 정보</h3>
+        <section class="form_feild">
+            <div class="full">
+                <input type="text" class="input_text">
+                <label>담당자 이름 <i class="required">*</i></label>
+            </div>
+            <div class="flex">
+                <select name="" id="">
+                    <option value="">+82</option>
+                </select>
+                <div class="full">
+                    <input type="text" class="input_text">
+                    <label>담당자 휴대폰 번호 <i class="required">*</i></label>
+                    <button class="btn_check" disabled>본인 인증</button>
+                </div>
+            </div>
+        </section>
+
+        <h3>병원 정보</h3>
+        <section class="form_feild">
+            <div class="full">
+                <input type="text" class="input_text">
+                <label>병원명 <i class="required">*</i></label>
+            </div>
+            <div class="full">
+                <input type="text" class="input_text">
+                <label>병원 전화번호 <i class="required">*</i></label>
+            </div>
+            <div class="textarea full">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <p>
+                    <label>병원 소개 <i class="required">*</i></label> <br><br>
+                    (주요 고객, 자신 있는 치료, 치료사 교육 내용 등 힐미 이용자들에게 소개하고 싶은 병원의 정보들을 입력해주세요)
+                </p>
+            </div>
+        </section>
+
+        <section class="form_feild">
+            <div class="flex">
+                <div class="tit"><b>주소</b></div>
+                <div class="full">
+                    <input type="text" class="input_text">
+                    <label for="">우편 번호</label>
+                    <button class="btn_zipcode">우편번호 검색</button>
+                </div>
+            </div>
+            <div class="full">
+                <input type="text" class="input_text">
+                <label for="">기본 주소</label>
+            </div>
+            <div class="full">
+                <input type="text" class="input_text">
+                <label for="">상세 주소</label>
+            </div>
+        </section>
+
+        <section class="form_feild">
+            <div class="add_img">
+                <div class="tit"><b>병원 이미지</b></div>
+                <div class="add_img_wrap">
+                    <div class="img_box"></div><!-- add img 넣어주세요 -->
+                    <p>병원과 관련된 정사각형 비율의 이미지를 업로드 해주세요. <br>(jpeg, png, gif, bmp 파일 형식 / 의사 사진 불가)</p><!-- img file 명으로 대체 -->
+                    <div class="btn_box">
+                        <input type="file" class="input_file" id="f1">
+                        <label for="f1">이미지 업로드</label>
+                        <button>이미지 삭제</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form_feild">
+            <div class="opening_hours">
+                <p class="on">진료 시간</p>
+                <ul>
+                    <li>
+                        <span class="lunch">점심시간</span>
+                        <select name="" id="">
+                            <option value="">오전</option>
+                            <option value="">오후</option>
+                        </select>
+                        <div>
+                            <input type="text" id="lunch_t1">
+                            <label for="lunch_t1">시</label>
+                            <input type="text" id="lunch_m1">
+                            <label for="lunch_m1">분 부터</label>
+                        </div>
+                        <select name="" id="">
+                            <option value="">오후</option>
+                            <option value="">오전</option>
+                        </select>
+                        <div>
+                            <input type="text" id="lunch_t2">
+                            <label for="lunch_t2">시</label>
+                            <input type="text" id="lunch_m2">
+                            <label for="lunch_m2">분 까지</label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>월</span>
+                        <select name="" id="">
+                            <option value="">오전</option>
+                            <option value="">오후</option>
+                        </select>
+                        <div>
+                            <input type="text" id="mon_t1">
+                            <label for="mon_t1">시</label>
+                            <input type="text" id="mon_m1">
+                            <label for="mon_m1">분 부터</label>
+                        </div>
+                        <select name="" id="">
+                            <option value="">오후</option>
+                            <option value="">오전</option>
+                        </select>
+                        <div>
+                            <input type="text" id="mon_t2">
+                            <label for="mon_t2">시</label>
+                            <input type="text" id="mon_m2">
+                            <label for="mon_m2">분 까지</label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>화</span>
+                        <select name="" id="">
+                            <option value="">오전</option>
+                            <option value="">오후</option>
+                        </select>
+                        <div>
+                            <input type="text" id="tue_t1">
+                            <label for="tue_t1">시</label>
+                            <input type="text" id="tue_m1">
+                            <label for="tue_m1">분 부터</label>
+                        </div>
+                        <select name="" id="">
+                            <option value="">오후</option>
+                            <option value="">오전</option>
+                        </select>
+                        <div>
+                            <input type="text" id="tue_t2">
+                            <label for="tue_t2">시</label>
+                            <input type="text" id="tue_m2">
+                            <label for="tue_m2">분 까지</label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>수</span>
+                        <select name="" id="">
+                            <option value="">오전</option>
+                            <option value="">오후</option>
+                        </select>
+                        <div>
+                            <input type="text" id="wed_t1">
+                            <label for="wed_t1">시</label>
+                            <input type="text" id="wed_m1">
+                            <label for="wed_m1">분 부터</label>
+                        </div>
+                        <select name="" id="">
+                            <option value="">오후</option>
+                            <option value="">오전</option>
+                        </select>
+                        <div>
+                            <input type="text" id="wed_t2">
+                            <label for="wed_t2">시</label>
+                            <input type="text" id="wed_m2">
+                            <label for="wed_m2">분 까지</label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>목</span>
+                        <select name="" id="">
+                            <option value="">오전</option>
+                            <option value="">오후</option>
+                        </select>
+                        <div>
+                            <input type="text" id="thu_t1">
+                            <label for="thu_t1">시</label>
+                            <input type="text" id="thu_m1">
+                            <label for="thu_m1">분 부터</label>
+                        </div>
+                        <select name="" id="">
+                            <option value="">오후</option>
+                            <option value="">오전</option>
+                        </select>
+                        <div>
+                            <input type="text" id="thu_t2">
+                            <label for="thu_t2">시</label>
+                            <input type="text" id="thu_m2">
+                            <label for="thu_m2">분 까지</label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>금</span>
+                        <select name="" id="">
+                            <option value="">오전</option>
+                            <option value="">오후</option>
+                        </select>
+                        <div>
+                            <input type="text" id="fri_t1">
+                            <label for="fri_t1">시</label>
+                            <input type="text" id="fri_m1">
+                            <label for="fri_m1">분 부터</label>
+                        </div>
+                        <select name="" id="">
+                            <option value="">오후</option>
+                            <option value="">오전</option>
+                        </select>
+                        <div>
+                            <input type="text" id="fri_t2">
+                            <label for="fri_t2">시</label>
+                            <input type="text" id="fri_m2">
+                            <label for="fri_m2">분 까지</label>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="sat">토</span>
+                        <select name="" id="">
+                            <option value="">오전</option>
+                            <option value="">오후</option>
+                        </select>
+                        <div>
+                            <input type="text" id="sat_t1">
+                            <label for="sat_t1">시</label>
+                            <input type="text" id="sat_m1">
+                            <label for="sat_m1">분 부터</label>
+                        </div>
+                        <select name="" id="">
+                            <option value="">오후</option>
+                            <option value="">오전</option>
+                        </select>
+                        <div>
+                            <input type="text" id="sat_t2">
+                            <label for="sat_t2">시</label>
+                            <input type="text" id="sat_m2">
+                            <label for="sat_m2">분 까지</label>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="sun">일</span>
+                        <select name="" id="">
+                            <option value="">오전</option>
+                            <option value="">오후</option>
+                        </select>
+                        <div>
+                            <input type="text" id="sun_t1">
+                            <label for="sun_t1">시</label>
+                            <input type="text" id="sun_m1">
+                            <label for="sun_m1">분 부터</label>
+                        </div>
+                        <select name="" id="">
+                            <option value="">오후</option>
+                            <option value="">오전</option>
+                        </select>
+                        <div>
+                            <input type="text" id="sun_t2">
+                            <label for="sun_t2">시</label>
+                            <input type="text" id="sun_m2">
+                            <label for="sun_m2">분 까지</label>
+                        </div>
+                    </li>
+                    <li>
+                        <textarea name="" id="" cols="30" rows="10" class="closed_information"></textarea>
+                        <p>휴무 정보 <br><br>(매주 휴무 정보, 격주 휴무 정보 등)</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <h3>법인(개인) 사업자 등록 정보</h3>
+        <section class="form_feild">
+            <div class="full">
+                <input type="text" class="input_text">
+                <label>등록 번호 <i class="required">*</i></label>
+            </div>
+            <div class="full">
+                <input type="text" class="input_text">
+                <label>법인명(단체명 또는 상호) <i class="required">*</i></label>
+            </div>
+            <div class="full">
+                <input type="text" class="input_text">
+                <label>대표자 성함 <i class="required">*</i></label>
+            </div>
+        </section>
+
+        <h3>가능한 치료 종류</h3>
+        <p>병원에서 환자가 받을 수 있는 치료에 대해 알려주세요.</p>
+        <div class="cure_list">
+            <ul>
+                <li>
+                    <input type="checkbox" class="input_checkbox" id="c1">
+                    <label for="c1">주사 치료</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="input_checkbox" id="c2">
+                    <label for="c2">도수 치료</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="input_checkbox" id="c3">
+                    <label for="c3">전기 치료</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="input_checkbox" id="c4">
+                    <label for="c4">고주파 치료</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="input_checkbox" id="c5">
+                    <label for="c5">충격파 치료</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="input_checkbox" id="c6">
+                    <label for="c6">견인 치료</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="input_checkbox" id="c7">
+                    <label for="c7">운동 치료</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="input_checkbox" id="c8">
+                    <label for="c8">아이스</label>
+                </li>
+                <li>
+                    <input type="checkbox" class="input_checkbox" id="c9">
+                    <label for="c9">테이핑</label>
+                </li>
+                <li class="etc_li">
+                    <input type="checkbox" class="input_checkbox c10" id="c10">
+                    <label for="c10">기타</label>
+                </li>
+            </ul>
+            <div class="etc_cure">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <p>기타 가능한 다른 치료방법이 있다면 입력해주세요</p>    
+            </div>
+        </div>
+
+        <h3>약관 동의</h3>
+        <section class="form_feild">
+            <div class="agree_wrap">
+                <div class="agree_check_txt">
+                    <input type="checkbox" id="c1">
+                    <label for="c1" class="t1">서비스 이용약관에 동의합니다. <i class="required">*</i></label>
+                </div>
+                <div class="hidden_txt scrollbar-macosx">
+                    ## **제1조 (목적)**
+                
+                    이 이용약관은 'HEAL ME'(이하 '회사'라 함)가 제공하는 HEAL ME 서비스 이용과 관련하여 회사와 서비스 이용자(이라 '회원'이라 함)간의 권리, 의무 및 책임사항, 기타 필요한 사항에 대한 규정을 목적으로 합니다.
+
+                    ## 제**2조 (정의)**
+
+                    이 이용약관에서 사용하는 용어의 정의는 다음과 같습니다.
+
+                    1. '서비스'라 함은 구현되는 단말기(PC, TV, 휴대형 단말기 등의 각종 유무선 장치를 포함)와 상관없이 회원이 이용할 수 있는 제반 서비스를 의미합니다.
+                        1. HEAL ME 서비스
+                        2. 기타 회사가 정하는 서비스
+                    2. 'HEAL ME 서비스'라 함은 리뷰 작성, 모바일 예약, 결제 서비스 등 회사가 회원에게 제공하는 서비스를 뜻합니다.
+                    3. '기타 회사가 정하는 서비스'라 함은 "회사"가 추가 개발하거나 다른 회사와의 제휴 계약 등을 통해 "회원"에게 제공하는 일체 서비스를 뜻합니다.
+                    4. '회원'이라 함은 이 이용약관에 동의하고, 이용계약(이하 '회원가입'이라 함)을 하여 따라 회사와 이용계약을 체결하여 회사가 제공하는 제반 서비스를 이용할 수 있는 자격을 부여받은 자를 뜻합니다.
+                    5. '아이디(ID)'라 함은 회원의 식별과 서비스 이용을 위하여 회원이 정하고 회사가 승인하는 문자와 숫자의 조합으로서 이메일 또는 간편로그인 계정을 뜻합니다.
+                    6. '비밀번호'라 함은 회원이 부여받은 아이디와 일치하는 회원임을 확인하고 비밀보호를 위해 회원 스스로 정한 문자와 숫자의 조합을 뜻합니다.
+                    7. '단말기'라 함은 서비스에 접속하기 위해 회원이 이용하는 개인용 컴퓨터, PDA, 휴대전화, 태블릿PC 등 일체의 전산장치를 뜻합니다.
+                </div>
+            </div>
+            <div class="agree_wrap">
+                <div class="agree_check_txt">
+                    <input type="checkbox" id="c2">
+                    <label for="c2" class="t1">개인정보 처리방침에 동의합니다. <i class="required">*</i></label>
+                </div>
+                <div class="hidden_txt scrollbar-macosx">
+                    ## **제1조 (목적)**
+            
+                    이 이용약관은 'HEAL ME'(이하 '회사'라 함)가 제공하는 HEAL ME 서비스 이용과 관련하여 회사와 서비스 이용자(이라 '회원'이라 함)간의 권리, 의무 및 책임사항, 기타 필요한 사항에 대한 규정을 목적으로 합니다.
+            
+                    ## 제**2조 (정의)**
+            
+                    이 이용약관에서 사용하는 용어의 정의는 다음과 같습니다.
+            
+                    1. '서비스'라 함은 구현되는 단말기(PC, TV, 휴대형 단말기 등의 각종 유무선 장치를 포함)와 상관없이 회원이 이용할 수 있는 제반 서비스를 의미합니다.
+                        1. HEAL ME 서비스
+                        2. 기타 회사가 정하는 서비스
+                    2. 'HEAL ME 서비스'라 함은 리뷰 작성, 모바일 예약, 결제 서비스 등 회사가 회원에게 제공하는 서비스를 뜻합니다.
+                    3. '기타 회사가 정하는 서비스'라 함은 "회사"가 추가 개발하거나 다른 회사와의 제휴 계약 등을 통해 "회원"에게 제공하는 일체 서비스를 뜻합니다.
+                    4. '회원'이라 함은 이 이용약관에 동의하고, 이용계약(이하 '회원가입'이라 함)을 하여 따라 회사와 이용계약을 체결하여 회사가 제공하는 제반 서비스를 이용할 수 있는 자격을 부여받은 자를 뜻합니다.
+                    5. '아이디(ID)'라 함은 회원의 식별과 서비스 이용을 위하여 회원이 정하고 회사가 승인하는 문자와 숫자의 조합으로서 이메일 또는 간편로그인 계정을 뜻합니다.
+                    6. '비밀번호'라 함은 회원이 부여받은 아이디와 일치하는 회원임을 확인하고 비밀보호를 위해 회원 스스로 정한 문자와 숫자의 조합을 뜻합니다.
+                    7. '단말기'라 함은 서비스에 접속하기 위해 회원이 이용하는 개인용 컴퓨터, PDA, 휴대전화, 태블릿PC 등 일체의 전산장치를 뜻합니다.
+                </div>
+            </div>
+        </section>
+        <p class="description">서비스 이용약관에 동의해주세요.</p>
+        <button class="btn_join">회원가입 완료</button>
+        <!-- <button class="btn_join on">회원가입 완료</button> -->
+    </div>
+    <!-- <footer></footer> -->
+</div>
+
+<!-- popup -->
+<div class="layer_pop">
+    <img src="assets/img/ico_ok.svg" alt="">
+    <p>사용 가능한 아이디입니다.</p>
+    <button>확인</button>
+</div>
+
+<div class="layer_pop">
+    <img src="assets/img/ico_x.svg" alt="">
+    <p>사용 중인 아이디입니다.</p>
+    <button>확인</button>
+</div>
+<script type="text/javascript" src="assets/libs/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="assets/libs/jquery.scrollbar.min.js"></script>
+<script type="text/javascript" src="assets/js/healme_ui.js"></script>
+</body>
+</html>
